@@ -1,0 +1,80 @@
+--            ███████╗██╗░░██╗██╗████████╗██╗░░░██╗██████╗░
+--            ██╔════╝╚██╗██╔╝██║╚══██╔══╝██║░░░██║╚════██╗
+--            █████╗░░░╚███╔╝░██║░░░██║░░░╚██╗░██╔╝░░███╔═╝
+--            ██╔══╝░░░██╔██╗░██║░░░██║░░░░╚████╔╝░██╔══╝░░
+--            ███████╗██╔╝╚██╗██║░░░██║░░░░░╚██╔╝░░███████╗
+--            ╚══════╝╚═╝░░╚═╝╚═╝░░░╚═╝░░░░░░╚═╝░░░╚══════╝
+
+getgenv().ExitV2 = {
+    ['Visuals'] = {
+        ['Field Of Views'] = {
+            ['Aimbot'] = {
+                ['Use'] = false,
+                ['Show'] = false,
+                ['Filled'] = false,
+                ['Color'] = Color3.fromRGB(255, 255, 255),
+                ['Transparency'] = 1,
+                ['Radius'] = 40,
+                ['Position'] = "Mouse" --// Mouse, Center
+            },
+            ['Silent'] = {
+                ['Show'] = false,
+                ['Filled'] = false,
+                ['Color'] = Color3.fromRGB(255, 255, 255),
+                ['Transparency'] = 1,
+                ['Radius'] = 120,
+                ['Position'] = "Mouse" --// Mouse, Center
+            }
+        }
+    },
+    ['Combat'] = {
+        ['Aimbot'] = {
+            ['Settings'] = {
+                ['Key'] = 'C',
+                ['Enabled'] = true,
+                ['Predict'] = {
+                    ['Enabled'] = true,
+                    ['Velocity X'] = 0.1552,
+                    ['Velocity Y'] = 0.1552,
+                },
+                ['Smooth'] = {
+                    ['Enabled'] = true,
+                    ['Multiply'] = 1,
+                    ['Lerp'] = {
+                        ['Origin'] = 'ExitV2', --// ExitV2, Delta, Custom
+                        ['Customizable'] = {
+                            ['Alpha'] = 3,
+                            ['Control'] = 0.130
+                        }
+                    }
+                },
+                ['Bone'] = {
+                    ['Use'] = "Default", -- Default, Nearest
+                    ['Select'] = "Head",
+                    ['Offsets'] = {
+                        ['Enabled'] = false,
+                        ['X'] = 0.14,
+                        ['Y'] = 0.01
+                    }
+                }
+            }
+        },
+        ['Silent'] = {
+            ['Settings'] = {
+                ['Mode'] = 'Target', -- Target, FOV
+                ['Enabled'] = true,
+                ['Chance'] = 800, -- hitchance
+                ['Predict'] = {
+                    ['Velocity X'] = 0.1274,
+                    ['Velocity Y'] = 0.1274,
+                },
+                ['Bone'] = {
+                    ['Use'] = "Default",
+                    ['Select'] = "Head"
+                }
+            }
+        }
+    }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b8636044de2f4f0218393a263b148462.lua"))()
